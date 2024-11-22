@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "47199764-e72f-4185-8a78-fc1b67a2a80e",
+		"name": "calendly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14356698"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"prasun\",\n    \"email\": \"sun@anand.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/health",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:34:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Server Running\",\n    \"data\": {\n        \"status\": \"Up\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"prasun\",\n    \"email\": \"prasaun@anand.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/create",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"prasun\",\n    \"email\": \"prasaun@anand.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 17:09:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"User Created Successfully\",\n    \"data\": {\n        \"email\": \"prasaun@anand.com\",\n        \"name\": \"prasun\",\n        \"id\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"availability\": [\n    {\n      \"dayOfWeek\": \"MONDAY\",\n      \"startTime\": \"09:00:00\",\n      \"endTime\": \"12:00:00\"\n    },\n    {\n      \"dayOfWeek\": \"WEDNESDAY\",\n      \"startTime\": \"14:00:00\",\n      \"endTime\": \"18:00:00\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/1/availability",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1",
+						"availability"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add availability",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"availability\": [\n    {\n      \"dayOfWeek\": \"MONDAY\",\n      \"startTime\": \"09:00:00\",\n      \"endTime\": \"12:00:00\"\n    },\n    {\n      \"dayOfWeek\": \"WEDNESDAY\",\n      \"startTime\": \"14:00:00\",\n      \"endTime\": \"18:00:00\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/1/availability",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								"availability"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:37:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Availability Created Successfully\",\n    \"data\": {\n        \"availability\": [\n            {\n                \"id\": 9,\n                \"dayOfWeek\": \"MONDAY\",\n                \"startTime\": \"09:00:00\",\n                \"endTime\": \"12:00:00\",\n                \"userId\": 1\n            },\n            {\n                \"id\": 10,\n                \"dayOfWeek\": \"WEDNESDAY\",\n                \"startTime\": \"14:00:00\",\n                \"endTime\": \"18:00:00\",\n                \"userId\": 1\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Check Availibility",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/{userId}/availability",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"{userId}",
+						"availability"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check Availibility",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/users/1/availability",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1",
+								"availability"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:39:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Availability Fetched Successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"dayOfWeek\": \"Monday\",\n            \"startTime\": \"09:00:00\",\n            \"endTime\": \"12:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 2,\n            \"dayOfWeek\": \"Tuesday\",\n            \"startTime\": \"14:00:00\",\n            \"endTime\": \"18:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 7,\n            \"dayOfWeek\": \"MONDAY\",\n            \"startTime\": \"09:00:00\",\n            \"endTime\": \"12:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 8,\n            \"dayOfWeek\": \"WEDNESDAY\",\n            \"startTime\": \"14:00:00\",\n            \"endTime\": \"18:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 9,\n            \"dayOfWeek\": \"MONDAY\",\n            \"startTime\": \"09:00:00\",\n            \"endTime\": \"12:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 10,\n            \"dayOfWeek\": \"WEDNESDAY\",\n            \"startTime\": \"14:00:00\",\n            \"endTime\": \"18:00:00\",\n            \"userId\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Find Overlap",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user1Id\": \"user123\",\n  \"user2Id\": \"user456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/overlap",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"overlap"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find Overlap",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user1Id\": \"1\",\n  \"user2Id\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/overlap",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"overlap"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:40:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Overlaps found\",\n    \"data\": [\n        {\n            \"id\": 7,\n            \"dayOfWeek\": \"MONDAY\",\n            \"startTime\": \"09:00:00\",\n            \"endTime\": \"12:00:00\",\n            \"userId\": 1\n        },\n        {\n            \"id\": 9,\n            \"dayOfWeek\": \"MONDAY\",\n            \"startTime\": \"09:00:00\",\n            \"endTime\": \"12:00:00\",\n            \"userId\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Book Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"eventDate\": \"2024-01-08\",\n    \"availabilityId\": 3,\n    \"title\": \"TeamMeeting\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/bookEvent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"bookEvent"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Book Event",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 2,\n    \"eventDate\": \"2024-01-29\",\n    \"availabilityId\": 3,\n    \"title\": \"TeamMeeting\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/bookEvent",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"bookEvent"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:43:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"message\": \"The time slot is already booked.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/{userId}/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"{userId}",
+						"events"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Events",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/users/2/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2",
+								"events"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Nov 2024 16:44:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Events Fetched Successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"TeamMeeting\",\n            \"startTime\": \"2024-01-22T09:00:00\",\n            \"endTime\": \"2024-01-22T12:00:00\",\n            \"userId\": 2,\n            \"availabilityId\": 3\n        },\n        {\n            \"id\": 3,\n            \"title\": \"TeamMeeting\",\n            \"startTime\": \"2024-01-29T09:00:00\",\n            \"endTime\": \"2024-01-29T12:00:00\",\n            \"userId\": 2,\n            \"availabilityId\": 3\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
