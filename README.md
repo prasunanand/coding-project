@@ -206,6 +206,25 @@ curl --location 'http://localhost:8080/api/users/bookEvent' \
 }'
 ```
 
+* Success
+
+```shell
+{
+    "status": "success",
+    "message": "Event Booked Successfully",
+    "data": {
+        "id": 4,
+        "title": "TeamMeeting",
+        "startTime": "2024-01-08T09:00:00",
+        "endTime": "2024-01-08T12:00:00",
+        "userId": 2,
+        "availabilityId": 3
+    }
+}
+```
+
+* Failure
+
 ```shell
 {
     "status": 400,
